@@ -1,0 +1,22 @@
+ERROR:root:Test message
+ERROR:root:Test message
+INFO:root:Test message
+INFO:root:Test message
+INFO:root:Test message
+ERROR:Comm:No such comm target registered: jupyter.widget.control
+WARNING:Comm:No such comm: e01fc365-0f96-4195-8015-8f369dc98ce0
+WARNING:root:Warn msg
+ERROR:root:Error msg
+CRITICAL:root:Critical msg
+2023-09-30 07:15:10,534- Test message
+2023-09-30 07:15:12,410- Warn msg
+2023-09-30 07:15:13,330- Error msg
+2023-09-30 07:15:14,450- Critical msg
+2023-09-30 07:17:07,477- Test message
+2023-09-30 07:17:09,118- Warn msg
+2023-09-30 07:17:09,920- Error msg
+2023-09-30 07:17:10,658- Critical msg
+2023-09-30 07:17:29,766- INFO - Test message
+2023-09-30 07:17:30,642- WARNING - Warn msg
+2023-09-30 07:17:31,132- ERROR - Error msg
+2023-09-30 07:17:31,623- CRITICAL - Critical msg
