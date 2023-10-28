@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome!</title>
+    <style>
+        body {
+            background-color: 	#d4ffea;
+        }
+        h1 {
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Enter Your Name</h1>
+    <form action="/submit" method="post">
+        <input type="text" name="name" required>
+        <input type="submit" value="Submit">
+    </form>
+    {% if name %}
+        <h2>Hello, {{ name }}!</h2>
+    {% endif %}
+</body>
+</html>
