@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+    <title>Flask Chat App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1 id="user_header">{{username}}</h1>
+    <ul id="messages"></ul>
+    <input id="message_input" autocomplete="off"><button onclick="sendMessage()">Send</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.3/socket.io.min.js"></script>
+    <script>
+        var socket = io.connect('http://' + document.domain + ':' + location.port);
+
+        socket.on('robinapp_message', function(msg) {
+            var ul = document.getElementById('messages');
+            var li = document.createElement('li');
+            li.appendChild(document.createTextNode(msg));
+            ul.appendChild(li);
+        });
+
+        function sendMessage() {
+            var message_input = document.getElementById('message_input');
+            var user_header = document.getElementById('user_header');
+            socket.emit('robinapp_message', user_header.innerText + ':' + message_input.value);
+            message_input.value = '';
+        }
+    </script>
+</body>
+</html>
