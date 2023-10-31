@@ -1,1 +1,1 @@
-10. Design a Flask app with proper error handling for 404 and 500 errors.
+12. Build a Flask app that updates data in real-time using WebSocket connections.
