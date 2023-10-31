@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    <title>Flask Notifications</title>
+</head>
+<body>
+    <h1>Notifications</h1>
+    <ul id="notification_list"></ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.3/socket.io.min.js"></script>
+    <script>
+        var socket = io.connect('http://' + document.domain + ':' + location.port);
+
+        socket.on('notification_from_server', function(data) {
+            var ul = document.getElementById('notification_list');
+            var li = document.createElement('li');
+            li.appendChild(document.createTextNode(data.message));
+            ul.appendChild(li);
+        });
+    </script>
+</body>
+</html>
