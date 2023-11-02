@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Information</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>API Information - showing 50 out of {{data.count}}</h1>
+    <ul>
+        {% for api_info in data.entries[:50] %}
+            <li>
+                <strong>API:</strong> {{ api_info.API }}<br>
+                <strong>Description:</strong> {{ api_info.Description }}<br>
+                <strong>Auth:</strong> {{ api_info.Auth }}<br>
+                <strong>HTTPS:</strong> {{ api_info.HTTPS }}<br>
+                <strong>CORS:</strong> {{ api_info.Cors }}<br>
+                <strong>Link:</strong> <a href="{{ api_info.Link }}">{{ api_info.Link }}</a><br>
+                <strong>Category:</strong> {{ api_info.Category }}<br>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
