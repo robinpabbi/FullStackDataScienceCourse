@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h2>Welcome to the Movie Recommendation System</h2>
+    <form action="/recommend" method="post">
+        <label for="category">Enter your preferred movie category:</label>
+        <input type="text" id="category" name="category" required>
+        <input type="submit" value="Get Recommendations">
+    </form>
+</body>
+</html>
