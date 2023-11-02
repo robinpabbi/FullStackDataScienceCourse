@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+<head>
+    <title>My TimesOfIndia News Headline Scraper</title>
+</head>
+<body>
+    <h1>News Headlines - TimesOfIndia :</h1>
+    <ul>
+        {% for newsObj in news_headlines %}
+            <li><a href="{{newsObj.link}}">{{ newsObj.headline }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
